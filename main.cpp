@@ -4,36 +4,32 @@ using namespace std;
 #include "AllStruct.h"
 
 void listTest() {
-    SqList list;
+    SqList<int> list;
     initList(list);
-    for (int i = 0; i < 10; i++) {
-        insertList(list, i, i);
+    for (int i = 1; i < 10; i++) {
+        ListInsert(list, i, i);
     }
-    cout << "List: ";
-    for (int i = 0; i < list.length; i++) {
-        int k = findElem(list, i);
-        if (k == -1) continue;
-        cout << k;
+    cout << "删除前：" << endl;
+    for (int i = 1; i < 10; i++) {
+        cout << LocateElem(list, i);
     }
-    cout << endl;
     int e;
-    deleteListElem(list, 2, e);
-    cout << "删除下标2的元素后，List: ";
-    for (int i = 0; i < 10; i++) {
-        int k = findElem(list, i);
-        cout << k << " ";
+    ListDelete(list, 3, e);
+    cout << endl << "删除位置i = 3后：" << endl;
+    for (int i = 1; i < 10; i++) {
+        cout << LocateElem(list, i);
     }
 }
 
 void stackTest() {
-    SqStack<int> stack{};
+    SqStack<int> stack;
     initStack(stack);
-    push(stack, 1);
-    push(stack, 2);
-    push(stack, 3);
+    Push(stack, 1);
+    Push(stack, 2);
+    Push(stack, 3);
     for (int i = 0; i < 3; i++) {
         int p;
-        pop(stack, p);
+        Pop(stack, p);
         cout << p << endl;
     }
 }

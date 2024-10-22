@@ -40,9 +40,9 @@ void preOrderNore(BTNode *b) {
     while (p != nullptr || !isEmpty(stack)) {
         if (p) {
             visit(p);
-            push(stack, p);
+            Push(stack, p);
         } else {
-            pop(stack, p);
+            Pop(stack, p);
             p = p->rchild;
         }
     }
@@ -62,10 +62,10 @@ void inOrderNore(BTNode *b) {
     BTNode *p = b;
     while (p != nullptr || !isEmpty(stack)) {
         if (p) {
-            push(stack, p);
+            Push(stack, p);
         } else {
             visit(p);
-            pop(stack, p);
+            Pop(stack, p);
             p = p->rchild;
         }
     }

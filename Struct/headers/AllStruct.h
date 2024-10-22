@@ -7,7 +7,7 @@
 
 #include "Stack.h"
 #include "BiTree.h"
-#include "List.h"
+#include "SqList.h"
 
 
 #endif //ALLSTRUCT_H

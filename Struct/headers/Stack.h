@@ -19,15 +19,19 @@ void initStack(SqStack<T> &stack);
 
 //2.判断栈空 空返回-1 否则返回0
 template<typename T>
-int isEmpty(SqStack<T> &stack);
+bool isEmpty(SqStack<T> &stack);
 
 //3.入栈
 template<typename T>
-int push(SqStack<T> &stack, T data);
+bool Push(SqStack<T> &stack, T data);
 
 //4.出栈
 template<typename T>
-int pop(SqStack<T> &stack, T &data);
+bool Pop(SqStack<T> &stack, T &data);
+
+//5.取栈顶元素
+template<typename T>
+bool GetTop(SqStack<T> stack, T &data);
 
 #include"../Stack.impl.h"
 #endif //STACK_H

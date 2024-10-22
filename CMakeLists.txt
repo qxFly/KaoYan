@@ -8,5 +8,5 @@ include_directories(
 add_executable(KaoYan main.cpp
         Struct/BiTree.cpp
         Struct/Stack.impl.h
-        Struct/List.cpp
+        Struct/SqList.impl.h
 )
